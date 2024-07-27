@@ -1,0 +1,20 @@
+
+
+
+@mixin notebook{
+    @media(max-width:1366px){
+         @content;
+    }
+}
+
+
+@mixin pad{
+    @media(max-width:768px){
+         @content;
+    }
+}
+
+
+// 使用 @include pad{ }
+
+

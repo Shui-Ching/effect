@@ -1,0 +1,26 @@
+//全站基本設定
+*{
+    transition-duration: 0.5s;
+}
+html, body{
+    font-family: $defaultFontFamily;
+    font-size: $mainSize;
+}
+
+//a設定
+a{
+    color: #000;
+}
+
+a:hover{
+    color: $hoverColor;
+}
+//img設定
+img{
+    max-width: 100%;
+}
+
+
+.wrap{
+    max-width: 1400px;
+}
