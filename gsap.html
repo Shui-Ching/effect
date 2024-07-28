@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
+  
+     <!-- 官方gsap套件
+    https://gsap.com/docs/v3/Plugins/ScrollTrigger/?page=1 -->
+  
+  <style>
+    /* body, html {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    } */
+
+    .container {
+      width: 500%;
+      height: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .topBlock {
+      
+      height: 500px;
+      background: yellow;
+      position: relative;
+    }
+    .topBlock h2{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+     text-align: center;
+    }
+    .item:nth-child(even){
+      padding-top:200px ;
+    }
+    .panel:nth-child(even){
+      background-color: #EFF7FF;
+    }
+    .yearItem{
+      padding-left: 250px;
+    }
+    .item{
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    .footer {
+      height: 500px;
+      background: #4c07ad;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topBlock">
+   <h2> banner</h2>
+  </div>
+
+  <div class="description">
+    1111
+  </div>
+
+  <div class="container">
+
+    <div class="panel blue">
+     <div class="yearItem"><img src="images/gsap/1987.png" alt=""></div>
+     <div class="item"><img src="images/gsap/item.png" alt=""></div>
+     <div class="item"><img src="images/gsap/item.png" alt=""></div>
+     <div class="item"><img src="images/gsap/item.png" alt=""></div>
+     <div class="item"><img src="images/gsap/item.png" alt=""></div>
+     <div class="item"><img src="images/gsap/item.png" alt=""></div>
+     <div class="item"><img src="images/gsap/item.png" alt=""></div>
+     <div class="item"><img src="images/gsap/item.png" alt=""></div>
+    </div>
+
+    <section class="panel red">
+      <div class="yearItem"><img src="images/gsap/1987.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+    </section>
+
+    <section class="panel gray">
+      <div class="yearItem"><img src="images/gsap/1987.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+    </section>
+
+
+    <section class="panel purple">
+      <div class="yearItem"><img src="images/gsap/1987.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+    </section>
+
+
+    <section class="panel green">
+      <div class="yearItem"><img src="images/gsap/1987.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+      <div class="item"><img src="images/gsap/item.png" alt=""></div>
+    </section>
+
+
+  </div>
+
+  <div class="final">
+    <div class="footer"></div>
+  </div>
+
+
+
+
+
+
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+  <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=3.8.0c"></script>
+  <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&amp;skin=sunburst">
+  </script>
+
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    let sections = gsap.utils.toArray(".panel");
+
+    let scrollTween = gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none", // <-- IMPORTANT!
+      scrollTrigger: {
+        trigger: ".container",
+        pin: true,
+        scrub: 0.1,
+        // snap: directionalSnap(1 / (sections.length - 1)),
+        end: "+=3000"
+      }
+    });
+
+    gsap.set(".box-1, .box-2", {
+      y: 100
+    });
+
+
+    ScrollTrigger.defaults({
+      markers: {
+        startColor: "white",
+        endColor: "white"
+      }
+    });
+
+
+
+
+
+
+    // red section
+    gsap.to(".box-1", {
+      y: -130,
+      duration: 2,
+      ease: "elastic",
+      scrollTrigger: {
+        trigger: ".box-1",
+        containerAnimation: scrollTween,
+        start: "left center",
+        toggleActions: "play none none reset",
+        id: "1",
+      }
+    });
+
+
+    // gray section
+    gsap.to(".box-2", {
+      y: -120,
+      backgroundColor: "#1e90ff",
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".box-2",
+        containerAnimation: scrollTween,
+        start: "center 80%",
+        end: "center 20%",
+        scrub: true,
+        id: "2"
+      }
+    });
+
+    // purple section
+    ScrollTrigger.create({
+      trigger: ".box-3",
+      containerAnimation: scrollTween,
+      toggleClass: "active",
+      start: "center 60%",
+      id: "3"
+    });
+
+    // green section
+    ScrollTrigger.create({
+      trigger: ".green",
+      containerAnimation: scrollTween,
+      start: "center 65%",
+      end: "center 51%",
+      onEnter: () => console.log("enter"),
+      onLeave: () => console.log("leave"),
+      onEnterBack: () => console.log("enterBack"),
+      onLeaveBack: () => console.log("leaveBack"),
+      onToggle: self => console.log("active", self.isActive),
+      id: "4"
+    });
+
+    // only show the relevant section's markers at any given time
+    gsap.set(".gsap-marker-start, .gsap-marker-end, .gsap-marker-scroller-start, .gsap-marker-scroller-end", {
+      autoAlpha: 0
+    });
+
+
+    ["red", "gray", "purple", "green"].forEach((triggerClass, i) => {
+      ScrollTrigger.create({
+        trigger: "." + triggerClass,
+        containerAnimation: scrollTween,
+        start: "left 30%",
+        end: i === 3 ? "right right" : "right 30%",
+        markers: false,
+        onToggle: self => gsap.to(".marker-" + (i + 1), {
+          duration: 0.25,
+          autoAlpha: self.isActive ? 1 : 0
+        })
+      });
+    });
+
+    // helper function for causing the sections to always snap in the direction of the scroll (next section) rather than whichever section is "closest" when scrolling stops.
+    // function directionalSnap(increment) {
+    //   let snapFunc = gsap.utils.snap(increment);
+    //   return (raw, self) => {
+    //     let n = snapFunc(raw);
+    //     return Math.abs(n - raw) < 1e-4 || (n < raw) === self.direction < 0 ? n : self.direction < 0 ? n - increment : n + increment;
+    //   };
+    // }
+
+    // making the code pretty/formatted.
+    PR.prettyPrint();
+  </script>
+
+</body>
+
+</html>
