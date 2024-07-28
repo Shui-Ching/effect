@@ -319,15 +319,16 @@ template {
 
 html, body {
   font-family: "Arial", "微軟正黑體", 微軟正黑體, "Microsoft JhengHei", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 a {
   color: #000;
+  text-decoration: none;
 }
 
 a:hover {
-  color: yellow;
+  color: blue;
 }
 
 img {
@@ -336,4 +337,5 @@ img {
 
 .wrap {
   max-width: 1400px;
+  margin: auto;
 }

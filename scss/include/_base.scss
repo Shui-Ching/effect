@@ -10,6 +10,7 @@ html, body{
 //a設定
 a{
     color: #000;
+    text-decoration: none;
 }
 
 a:hover{
@@ -23,4 +24,5 @@ img{
 
 .wrap{
     max-width: 1400px;
+    margin: auto;
 }
